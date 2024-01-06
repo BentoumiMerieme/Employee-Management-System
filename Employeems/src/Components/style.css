@@ -1,0 +1,337 @@
+@import "https://unpkg.com/open-props";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+.loginPage {
+    background: url(images\employeems.jpeg);
+    background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url(images\employeems.jpeg);
+    background-position: center;
+    background-repeat: no-repeat ;
+    background-color:  #8C5C4A;
+    background-size: 100% 120%;
+}
+.loginForm {
+   background-color:#BFBFBF;
+   color: #8C5C4A;
+   width: 100%;
+}
+ul li :hover{
+  background-color: #8C5C4A;
+}
+.mb-2 {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-6);
+    font-size: var(--font-size-5);
+    color: var(--gray-8);
+    background: #8C5C4A; 
+    border: 0;
+    padding: var(--size-4) var(--size-8);
+    transform: translateY(calc(var(--y, 0) * 0.2%)) scale(var(--scale, 1));
+    transition: transform 0.1s;
+    position: relative;
+  }
+  
+  .mb-2:hover {
+    --y: -2;
+    --scale: 0.8;
+    --border-scale: 1; 
+    color: #8C5C4A;
+  }
+  
+ .mb-2:active {
+    --y: 2%;
+    --scale: 0.95;
+    --border-scale: 0.9, 0.8; 
+  }
+  
+  .mb-2:before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--size-3) * -1);
+    border: var(--size-2) solid #8C5C4A;
+    transform: scale(var(--border-scale, 0));
+    transition: transform 0.125s;
+    color: #8C5C4A;
+    
+    --angle-one: 105deg;
+    --angle-two: 290deg;
+    --spread-one: 30deg;
+    --spread-two: 40deg;
+    --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+    --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+    --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+    --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+    
+    mask: conic-gradient(
+      transparent 0 var(--start-one),
+      white var(--start-one) var(--end-one),
+      transparent var(--end-one) var(--start-two),
+      white var(--start-two) var(--end-two),
+      transparent var(--end-two)
+    );
+    
+    z-index: -1;
+  }
+  .text-warning {
+    color: #BF7E6F;
+  }
+
+  .btn-custom-color {
+    background-color: #8C5C4A; 
+    color: #000000; 
+    text-align: center; 
+    width: 15%;
+    display: block; 
+    margin: 0 auto;
+  }
+
+  .employee_image{
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+  }
+
+  /* Button Styles */
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #3498db;
+  color: #3498db;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 5px;
+}
+
+/* Edit Button */
+.edit-button {
+  border-color: #27ae60;
+  color: #27ae60;
+}
+
+.edit-button:hover {
+  background-color: #27ae60;
+  color: #ffffff;
+}
+
+/* Delete Button */
+.delete-button {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.delete-button:hover {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.btn_admin {
+  --c:  #BFBFBF; /* the color*/
+  
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+.btn_admin:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+.btn_admin:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
+}
+
+.btn_admin {
+  font-family: system-ui, sans-serif;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: .1em .6em;
+  font-weight: bold;  
+  border: none;
+}
+
+
+
+
+.btn_employee{
+  --c: #BFBFBF; /* the color*/
+  
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+.btn_employee:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+.btn_employee:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
+}
+
+.btn_employee {
+  font-family: system-ui, sans-serif;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: .1em .6em;
+  font-weight: bold;  
+  border: none;
+}
+
+
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	background: #CA7C4E;
+  background: -webkit-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: -moz-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: -o-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EEBE6C', endColorstr='#CA7C4E',GradientType=1 ); 
+  color: #786450;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.frame, .title{
+  text-align: center;
+}
+.center {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+	height: 299px;
+	width: 320px;
+	background: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+ 
+}
+
+.profile {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 320px;
+}
+	.image {
+		position: relative;
+		width: 70px;
+		height: 70px;
+		margin: 38px auto 0 auto;
+  }
+.circle-1, .circle-2 {
+			position: absolute;
+			box-sizing: border-box;
+			width: 76px;
+			height: 76px;
+			top: -3px;
+			left: -3px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #786450 #786450 #786450 transparent;
+			border-radius: 50%;
+			transition: all 1.5s ease-in-out;
+		}
+ .circle-1{
+      width: 76px;
+			height: 76px;
+			top: -3px;
+			left: -3px;
+      border-color: #786450 #786450 #786450 transparent;
+    }
+		
+		.circle-2 {
+			width: 82px;
+			height: 82px;
+			top: -6px;
+			left: -6px;
+			border-color: #786450 transparent #786450 #786450;
+		}
+		
+	img {
+        width: 70px;
+        height: 70px;
+			display: block;
+			border-radius: 50%;
+			background: #F5E8DF;
+   
+		}
+		
+    .image:hover .circle-1 {
+      transform: rotate(360deg);
+    }
+    
+    .image:hover .circle-2 {
+      transform: rotate(-360deg);
+    }
+	.name {
+		font-size: 15px;
+		font-weight: 600;
+		margin-top: 20px;
+	}
+	
+	.job {
+		font-size: 11px;
+		line-height: 15px;
+	}
+	
+	.actions {
+		margin-top: 33px;
+  }
+	.actions,	.btn2 {
+			display: block;
+			width: 120px;
+			height: 30px;
+			margin: 0 auto 10px auto;
+			background: none;
+			border: 1px solid #786450;
+			border-radius: 15px;
+			font-size: 12px;
+			font-weight: 600;
+			box-sizing: border-box;
+			transition: all .3s ease-in-out;
+			color: #786450;
+			
+			/*&:hover {
+				background: #786450;
+				color: #fff;
+			}*/
+		}
+     .btn2:hover{
+      background: #786450;
+				color: #fff;
+    }
+	
+
+
